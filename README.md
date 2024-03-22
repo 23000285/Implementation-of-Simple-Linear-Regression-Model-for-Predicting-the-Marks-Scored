@@ -58,9 +58,6 @@ print(y)
 
 from sklearn.model_selection import train_test_split
 X_train,X_test,Y_train,Y_test=train_test_split(x,y,test_size=1/3,random_state=0)
-
-# Import linear regression model and fit the model with the data
-
 from sklearn.linear_model import LinearRegression
 regressor=LinearRegression()
 regressor.fit(X_train,Y_train)
@@ -68,11 +65,13 @@ Y_pred=regressor.predict(X_test)
 
 # Displaying predicted values
 
-Y_pred
+print("Predicted values")
+print(Y_pred)
 
 # Displaying actual values
 
-Y_test
+print("Actual values")
+print(Y_test)
 
 # Graph plot for training data
 
@@ -99,14 +98,15 @@ print('MSE = ',MSE)
 MAE = mean_absolute_error(Y_test,Y_pred)
 print('MAE = ',MAE)
 RMSE=np.sqrt(MSE)
-print("RMSE = ",RMSE)import pandas as pd
-
+print("RMSE = ",RMSE)
 ```
 
 ## Output:
 ![alt text](<Screenshot 2024-03-22 213038.png>)
 ![alt text](<Screenshot 2024-03-22 214525.png>)
 ![alt text](<Screenshot 2024-03-22 214531.png>) 
+![alt text](image-1.png)
+![alt text](image.png)
 ![alt text](<Screenshot 2024-03-22 213140.png>) ![alt text](<Screenshot 2024-03-22 213149.png>)
 ![alt text](<Screenshot 2024-03-22 213157.png>)
 
